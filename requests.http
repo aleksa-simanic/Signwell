@@ -1,0 +1,36 @@
+@host = http://localhost:8080
+
+GET {{host}}/health
+
+###
+
+GET {{host}}/api/v1/jobs
+
+###
+
+POST {{host}}/api/v1/jobs
+Content-Type: application/json
+
+{
+  "code": "SW-210",
+  "client": "Harbor Inn",
+  "title": "Porch hanging sign",
+  "substrate": "wood",
+  "medium": "enamel",
+  "dueOn": "2026-09-01",
+  "tags": ["inn", "rush"]
+}
+
+###
+
+POST {{host}}/api/v1/jobs/{{jobId}}/advance
+
+###
+
+POST {{host}}/api/v1/jobs/{{jobId}}/notes
+Content-Type: application/json
+
+{
+  "message": "Layout approved on tracing paper.",
+  "status": "lettered"
+}

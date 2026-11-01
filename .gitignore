@@ -1,0 +1,19 @@
+# Binaries
+bin/
+dist/
+signwell
+signwell.exe
+*.exe
+*.test
+*.out
+coverage.out
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+*.local
